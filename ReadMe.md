@@ -10,5 +10,5 @@ ___
 ___
 ### How To Install
 1. Install **[TamperMonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**.
-1. Download Our Script From **[Releases](https://github.com/CoSeR-Source/DC-Token-Login/releases)**.
+1. Download Our Script From **[Rdeleases](https://github.com/CoSeR-Source/DC-Token-Login/releases)**.
 1. Add It In To Your Userscripts.
