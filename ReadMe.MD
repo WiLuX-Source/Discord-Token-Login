@@ -2,3 +2,10 @@
 ___
 ## Description
 __Discord Token Login__ is a script that allows you to login your accounts via Discord tokens __With Advanced & Comfortable Way.__
+___
+### Features
+- Script Has 4 Slots Minimum And Max 10 Slots For User Choice.(Not Added Yet)
+- Script Uses Less Resource To Give The User Best Performance
+- There is an Offline HTML Website That Lets You To Configure Your Settings Easily.(Not Added Yet)
+___
+### How To Install
