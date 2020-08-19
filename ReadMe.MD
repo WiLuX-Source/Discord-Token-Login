@@ -1,1 +1,1 @@
-# ![Markdown Logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.podfeet.com%2Fblog%2Fwp-content%2Fuploads%2F2018%2F02%2Fdiscord-logo.png&f=1&nofb=1) Token Login
+# ![<img src ="https://github.com/CoSeR-Source/DC-Token-Login/blob/master/Discord-Logo.png?raw=true">] Token Login
