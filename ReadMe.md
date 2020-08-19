@@ -9,6 +9,6 @@ ___
 - There is an Offline HTML Website That Lets You To Configure Your Settings Easily.(Not Added Yet)
 ___
 ### How To Install
-1. Install **[TamperMonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**.
-1. Download Our Script From **[Releases](https://github.com/CoSeR-Source/DC-Token-Login/releases)**.
-1. Add It In To Your Userscripts.
+- Install **[TamperMonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**.
+- Download Our Script From **[Releases](https://github.com/CoSeR-Source/DC-Token-Login/releases)**.
+- Add It In To Your Userscripts.
