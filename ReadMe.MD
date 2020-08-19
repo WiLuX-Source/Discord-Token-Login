@@ -1,1 +1,1 @@
--------------------------------<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/DC%20Token%20Login.png" height="150px" alt="Logo">------------------------
+-------------------------------<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/DC%20Token%20Login.png" height="150" alt="Logo">------------------------
