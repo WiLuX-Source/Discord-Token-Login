@@ -1,1 +1,1 @@
-# <img src="https://github.com/CoSeR-Source/DC-Token-Login/blob/master/Discord-Logo.png?raw=true" height=100 alt=""> Token Login
+# <img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/DC%20Token%20Login.png" height=500 alt="">
