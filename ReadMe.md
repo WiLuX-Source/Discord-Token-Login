@@ -13,4 +13,4 @@ ___
 - Download Our Script From **[Releases](https://github.com/CoSeR-Source/DC-Token-Login/releases)**.
 - Add It In To Your Userscripts.
 ___
-### Current Look Of Script
+### Current Look
