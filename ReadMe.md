@@ -15,5 +15,4 @@ ___
 ___
 ## Current Look
 <img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/Show.png" alt="Example">
-___
 <img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/Hide.png" alt="Example">
