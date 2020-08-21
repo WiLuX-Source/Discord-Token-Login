@@ -14,6 +14,6 @@ ___
 - Add It In To Your Userscripts.
 ___
 ## Current Look
-<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/Show.png" alt="Example">&nbsp;
+<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/OFF.png" alt="Example">&nbsp;
 ___
-<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/Hide.png" alt="Example">
+<img src="https://raw.githubusercontent.com/CoSeR-Source/DC-Token-Login/master/Resources/ON.png" alt="Example">
