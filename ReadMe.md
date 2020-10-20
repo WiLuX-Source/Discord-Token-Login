@@ -16,10 +16,7 @@ ___
 - Add It In To Your Userscripts.
 ___
 ## Current Look
-<p align="right">
-<a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/OFF.png" alt="Example"></a>
-</p>
-
 <p align="center">
 <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/rly.png" alt="Example"></a>
+<a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/OFF.png" alt="Example"></a>
 </p>
