@@ -16,4 +16,4 @@ ___
 - Add It In To Your Userscripts.
 ___
 ## Current Look
-<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/rly.png" alt="Example">
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Currentlook.png" alt="Example">
