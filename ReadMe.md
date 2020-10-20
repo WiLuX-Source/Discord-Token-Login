@@ -15,3 +15,6 @@ ___
 ___
 ## Current Look
 <img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/rly.png" alt="Example">
+<p align="center">
+  <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/DC%20Token%20Login.png" height="300" alt="Logo"></a>
+</p>
