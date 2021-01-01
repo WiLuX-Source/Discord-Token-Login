@@ -8,7 +8,7 @@ ___
 ### Features
 - Script Has 4 Token Login Slots Minimum And Max ~~10 Slots~~ For User Choice.
 - Script Uses Less Resource To Give The User Best Performance
-- There is an ~~Offline HTML Website~~ That Lets You To Configure Your Settings Easily.
+- There is an Offline Configurator Website That Lets You To Configure Your Settings Easily.
 ___
 ### How To Install
 - Install **[TamperMonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**.
