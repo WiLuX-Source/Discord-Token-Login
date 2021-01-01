@@ -6,7 +6,7 @@ ___
 __Discord Token Login__ Allows You To Login Your Discord Accounts Via Token __With Advanced & Comfortable Way.__
 ___
 ### Features
-- Script Has 4 Token Login Slots Minimum And Max ~~10 Slots~~ For User Choice.
+- Script Has Maximum 10 Slots For User Choice.
 - Script Uses Less Resource To Give The User Best Performance
 - There is an Offline Configurator Website That Lets You To Configure Your Settings Easily.
 ___
