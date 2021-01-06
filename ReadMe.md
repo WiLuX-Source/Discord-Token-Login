@@ -2,9 +2,6 @@
   <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/DC%20Token%20Login.png" height="300" alt="Logo"></a></p>
 
 ___
-### Description
-__Discord Token Login__ Allows You To Login Your Discord Accounts Via Token __With Advanced & Comfortable Way.__
-___
 ### Features
 - Script Has Maximum 10 Slots For User Choice.
 - Script Uses Less Resource To Give The User Best Performance
