@@ -10,6 +10,7 @@ ___
 ### Used Sources
 - **Discord Token Login Root Code**(don't know owner of this code)
 - **[Saving Text To A Client-Side File Using Vanilla JS](https://robkendal.co.uk/blog/2020-04-17-saving-text-to-client-side-file-using-vanilla-js)**
+- **[Bookmark Token Login Method](https://github.com/Kappador/Token-Bookmark-Login)**
 ___
 ### How To Install
 - Install **[TamperMonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)**.
