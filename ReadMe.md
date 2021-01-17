@@ -1,5 +1,6 @@
 <p align="center">
   <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/NewLogo.png" height="200em" alt="Logo"></a></p>
+
 ### Features
 - Script Has Maximum 10 Slots For User Choice.
 - Script Uses Less Resource To Give The User Best Performance
