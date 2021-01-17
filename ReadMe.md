@@ -36,5 +36,5 @@
 - **Configurator Page Made By WiLuX**
 - **Idea Of This Project Found By Exinie**
 <br></br>
-## Current Look
+## 👁️‍🗨️ Current Look 👁️‍🗨️
 <img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Currentlook.png" alt="Example">
