@@ -8,7 +8,7 @@
 - **If You Feel Uncomfortable With Configurator Website You Can Manually Edit The Script Or Disconnect From The Internet.**
 - **It Is Completely Open Source & No Malicious Code Used In This Project You Can Check It From The Repository.**
 - **If You're going to edit this script Or You're planning to use this somewhere make sure you credit Wonfy & WiLuX For Their Hardwork.**
-- **If you forked this script please update it or add our names to the credit list.**
+- **If you forked this script before I added this section, please update it or add our names to the credit list.**
 <br></br>
 ## 🌀 Features 🌀
 - **Configurable 10 Account Slots ✔️**
