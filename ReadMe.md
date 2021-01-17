@@ -11,12 +11,12 @@
 - **If you forked this script please update it or add our names to the credit list.**
 <br></br>
 ## 🌀 Features 🌀
-- Configurable 10 Account Slots ✔️
-- Optimized Usage ✔️
-- Easy To Use Offline Configurator Website ✔️
-- Bookmark Method ❌
-- Extension Method ❌
-- Client Login Method ❌
+- **Configurable 10 Account Slots ✔️**
+- **Optimized Usage ✔️**
+- **Easy To Use Offline Configurator Website ✔️**
+- **Bookmark Method ❌**
+- **Extension Method ❌**
+- **Client Login Method ❌**
 <br></br>
 ## 📚 Used Sources 📚
 - **Discord Token Login Root Code**(don't know owner of this code)
