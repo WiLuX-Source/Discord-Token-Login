@@ -1,5 +1,5 @@
 <p align="center">
-  <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/NewLogo.png" height="200em" alt="Logo"></a></p>
+  <a><img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/New_LogoNB.png" height="200em" alt="Logo"></a></p>
 
 <br></br>
 ## ⚠️ Read Before Use ⚠️
