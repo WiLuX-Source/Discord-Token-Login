@@ -14,7 +14,7 @@
 - **Configurable 10 Account Slots ✔️**
 - **Optimized Usage ✔️**
 - **Easy To Use Offline Configurator Website ✔️**
-- **Bookmark Method ❌**
+- **Bookmark Method ✔️**
 - **Extension Method ❌**
 - **Client Login Method ❌**
 <br></br>
@@ -33,7 +33,7 @@
 <br></br>
 ## 📄 Credits 📄
 - **Script Made By Wonfy & WiLuX**
-- **Configurator Page Made By WiLuX**
+- **Configurator Page Made By WiLuX & Wonfy**
 - **Idea Of This Project Found By Exinie**
 <br></br>
 ## 👁️‍🗨️ Current Look 👁️‍🗨️
