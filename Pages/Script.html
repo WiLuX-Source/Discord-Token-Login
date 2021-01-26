@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurator</title>
+</head>
+<style>
+html {
+    height: 100%;
+    font-family: 'Helvetica';
+    -webkit-box-align: center;
+    --bg:#36393f;
+    --bg-panel:#202225;
+    --color-headings: #3694FF;
+    --color-text: #8e9297;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg);
+    margin: 0;
+}
+
+h1 {
+    color: var(--color-headings);
+    text-align: center;
+    margin-block-start: 0px;
+}
+
+/* Fix Box Sizes */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* Fix Box Sizes */
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+    background-color: var(--bg-panel);
+    width: 6px
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--color-headings);
+}
+/* Scrollbar */
+
+/* Tooltip */
+[script-tooltip] {
+  position: relative;
+  z-index: 10;
+}
+
+[script-tooltip]:before,
+[script-tooltip]:after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(50% + 5px);
+  pointer-events: none;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+
+[script-tooltip]:before {
+  content: attr(script-tooltip);
+  padding: 10px 18px;
+  min-width: 50px;
+  max-width: 300px;
+  width: max-content;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  white-space: pre-wrap;
+  transform: translate(-50%, -5px) scale(0.5);
+}
+
+
+[script-tooltip]:after {
+  content: '';
+  border-style: solid;
+  border-width: 5px 5px 0px 5px;
+  border-color: var(--color-headings) transparent transparent transparent;
+  transition-duration: 0s; 
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
+}
+
+
+[script-tooltip]:hover:before,
+[script-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+[script-tooltip]:hover:before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, -5px) scale(1);
+}
+
+[script-tooltip]:hover:after {
+  transition-delay: 0.5s; 
+  transition-duration: 0.2s;
+  transform: translateX(-50%) scaleY(1);
+}
+
+[script-tooltip-location="right"]:before,
+[script-tooltip-location="right"]:after {
+  left: calc(100% + 5px);
+  bottom: 50%;
+}
+
+[script-tooltip-location="right"]:before {
+  transform: translate(5px, 50%) scale(0.5);
+  background-color: var(--bg-panel);
+}
+[script-tooltip-location="right"]:hover:before {
+  transform: translate(5px, 50%) scale(1);
+}
+
+[script-tooltip-location="right"]:after {
+  border-width: 5px 5px 5px 0px;
+  border-color: transparent var(--color-headings) transparent transparent;
+  transform-origin: right;
+  transform: translateY(50%) scaleX(0);
+}
+[script-tooltip-location="right"]:hover:after {
+  transform: translateY(50%) scaleX(1);
+}
+
+/* Tooltip */
+
+/* Panels */
+.container {
+    background-color: var(--bg-panel);
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    border-radius: 15px;
+    margin-bottom:1.5em;
+
+}
+/* Panels */
+
+/* Navigation bar */
+nav {
+  margin: 0 auto;
+}
+
+nav ul {
+  text-align: center;
+  background: var(--bg-panel);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: helvetica;
+  text-transform:uppercase;
+  color: #009aff;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: #303338;
+  color: #0099ff9b;
+}
+/* Navigation bar */
+
+/*Logo*/
+#logo {
+    height: 15em;
+    background: #202225;
+    padding: 1em;
+    border-radius: 15px;
+    margin-top: 3em;
+}
+/*Logo*/
+
+/* Account Number Section */
+#container1 {
+    padding: 2em 4em;
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background:#2f3136;
+    background-image: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-left: 60px;
+    font-size: 20px;
+    color: var(--color-text);
+    cursor: pointer;
+}
+.select {
+    position: relative;
+    display: block;
+    height: 3em;
+    line-height: 3;
+    background: #2f3136;
+    overflow: hidden;
+    border-radius: 10px;
+}
+select::-ms-expand {
+    display: none;
+}
+.select::after {
+    content: '\25BC';
+    color: var(--color-text);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1em;
+    pointer-events: none;
+}
+
+.select::after {
+    transition: .25s all ease;
+}
+
+label {
+    display: inline;
+    font-weight: bold;
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    bottom: 11px;
+    margin-right: 20px;
+}
+/* Account Number Section */
+
+/* Account Token Section */
+#container2 {
+    padding: 23px 5em;
+    margin-bottom: 10px;
+}
+    
+#container2 h1 {
+    margin-block-end: 0px;
+}
+::placeholder {
+    color: var(--color-text);
+}
+input, textarea {
+    color: var(--color-text);
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    height: 40px;
+    outline: none;
+    background-color: #2f3136;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0 12px;
+}
+    
+fieldset {
+    margin: 21.440px 0px 0px 0px;
+    border:1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    width:30rem;
+}
+legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--color-text);
+    text-transform: uppercase;
+    padding: 0 1rem;
+    margin-left: -1rem;
+    top: 2px;
+    position: relative;
+    line-height: 0;
+}
+/* Account Token Section */
+
+/* Download Button */
+#btn {
+  background-color: var(--bg-panel);
+  display: table;
+  margin: 0px auto 20px auto;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  width: 70px;
+  padding: 0;
+}
+#btn svg {
+ fill: var(--color-headings);
+ vertical-align: middle;
+ display: inline-block;
+}
+/* Download Button */
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--bg-panel);
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: var(--color-headings);
+    font-weight: 600;
+    height: 76px;
+}
+.bottomtext {
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 5px 0 5px;
+}
+/* Footer */
+</style>
+<body>
+    <div style="min-height:calc(100vh - 76px)">
+    <nav>
+        <ul>
+          <li>
+            <a href="Bookmark.html">Bookmark</a>
+          </li>
+          <li>
+            <a href="Script.html">Script</a>
+          </li>
+        </ul>
+      </nav>
+<p script-tooltip="Cool Logo :)" style="text-align:center;margin-block-start: -1em;margin-block-end: 1em;"><img id="logo" src="New_LogoNB.png" alt="logo"></p>
+    <div script-tooltip="Section that allows you to specify account numbers." script-tooltip-location="right" class="container" id="container1">
+        <h1>Account Number</h1>
+        <div class="select">
+         <select id="ac_number">
+            <option value="ac1">1 Account</option>
+            <option value="ac2">2 Accounts</option>
+            <option value="ac3">3 Accounts</option>
+            <option value="ac4">4 Accounts</option>
+            <option value="ac5">5 Accounts</option>
+            <option value="ac6">6 Accounts</option>
+            <option value="ac7">7 Accounts</option>
+            <option value="ac8">8 Accounts</option>
+            <option value="ac9">9 Accounts</option>
+            <option value="ac10">10 Accounts</option>
+         </select>
+        </div>
+    </div>
+    <div script-tooltip="Put your tokens without ' '" script-tooltip-location="right" class="container" id="container2">
+     <h1>Account Token</h1>
+     <fieldset id="Account1f">
+        <legend>Account 1</legend> 
+        <div class="form-item">
+            <input type="text" name="Account1" id="Account1" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account2f" class="hideable" style="display: none;">
+        <legend>Account 2</legend> 
+        <div class="form-item">
+            <input type="text" name="Account2" id="Account2" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account3f" class="hideable" style="display: none;">
+        <legend>Account 3</legend> 
+        <div class="form-item">
+            <input type="text" name="Account3" id="Account3" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account4f" class="hideable" style="display: none;">
+        <legend>Account 4</legend> 
+        <div class="form-item">
+            <input type="text" name="Account4" id="Account4" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account5f" class="hideable" style="display: none;">
+        <legend>Account 5</legend> 
+        <div class="form-item">
+            <input type="text" name="Account5" id="Account5" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account6f" class="hideable" style="display: none;">
+        <legend>Account 6</legend> 
+        <div class="form-item">
+            <input type="text" name="Account6" id="Account6" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account7f" class="hideable" style="display: none;">
+        <legend>Account 7</legend> 
+        <div class="form-item">
+            <input type="text" name="Account7" id="Account7" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account8f" class="hideable" style="display: none;">
+        <legend>Account 8</legend> 
+        <div class="form-item">
+            <input type="text" name="Account8" id="Account8" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account9f" class="hideable" style="display: none;">
+        <legend>Account 9</legend> 
+        <div class="form-item">
+            <input type="text" name="Account9" id="Account9" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    <fieldset id="Account10f" class="hideable" style="display: none;">
+        <legend>Account 10</legend> 
+        <div class="form-item">
+            <input type="text" name="Account10" id="Account10" placeholder="Input Your Token">
+        </div>
+    </fieldset>
+    </div>
+    <button script-tooltip="After specifying 2 sections above press this button for download." script-tooltip-location="right" id="btn" onclick="applychanges(); download();">
+        <svg id="Layer_1" x="0px" y="0px" viewbox="0 -35 512 512">
+            <path d="M240.915,420.418c0.004,0.004,0.008,0.007,0.012,0.011c0.493,0.492,1.012,0.959,1.551,1.402     c0.247,0.203,0.508,0.379,0.762,0.57c0.303,0.227,0.6,0.462,0.915,0.673c0.304,0.203,0.619,0.379,0.931,0.565     c0.286,0.171,0.565,0.35,0.859,0.507c0.318,0.17,0.645,0.314,0.97,0.467c0.306,0.145,0.608,0.298,0.922,0.428     c0.315,0.13,0.637,0.236,0.957,0.35c0.337,0.121,0.669,0.25,1.013,0.354c0.32,0.097,0.645,0.168,0.969,0.249     c0.351,0.089,0.698,0.187,1.056,0.258c0.375,0.074,0.753,0.118,1.13,0.172c0.311,0.044,0.618,0.104,0.933,0.135     c1.4,0.138,2.811,0.138,4.211,0c0.315-0.031,0.622-0.09,0.933-0.135c0.377-0.054,0.755-0.098,1.13-0.172     c0.358-0.071,0.705-0.169,1.056-0.258c0.323-0.081,0.649-0.152,0.969-0.249c0.344-0.104,0.677-0.233,1.013-0.354     c0.32-0.115,0.642-0.22,0.957-0.35c0.314-0.13,0.616-0.283,0.922-0.428c0.325-0.153,0.652-0.297,0.97-0.467     c0.294-0.157,0.573-0.337,0.859-0.507c0.312-0.186,0.627-0.362,0.931-0.565c0.315-0.211,0.612-0.446,0.915-0.673     c0.254-0.19,0.515-0.367,0.762-0.57c0.539-0.443,1.058-0.909,1.551-1.402c0.004-0.004,0.008-0.007,0.012-0.011l149.333-149.333     c8.331-8.331,8.331-21.839,0-30.17s-21.839-8.331-30.17,0L277.333,353.83V21.333C277.333,9.551,267.782,0,256,0     s-21.333,9.551-21.333,21.333V353.83L121.752,240.915c-8.331-8.331-21.839-8.331-30.17,0s-8.331,21.839,0,30.17L240.915,420.418z     "/>
+        </svg>
+     </button>
+    </div>
+     <footer>
+        <span class="bottomtext">Made By
+        </span>Wonfy &amp; WiLuX
+    </footer>
+</body>
+<script>
+// UI //
+ var minions = document.getElementsByClassName('hideable');
+ var ac_number = document.getElementById('ac_number')
+ ac_number.addEventListener("change", function() {
+    if(ac_number.value == "ac1") {
+     for (var i = 0; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+}}
+    else if(ac_number.value == "ac2") {
+     for (var i = 1; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+    }
+    else if(ac_number.value == "ac3") {
+     for (var i = 2; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+    }
+    else if(ac_number.value == "ac4") {
+     for (var i = 3; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+    }
+    else if(ac_number.value == "ac5") {
+     for (var i = 4; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+    }
+    else if(ac_number.value == "ac6") {
+     for (var i = 5; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+     document.getElementById("Account6f").style.display="block";
+    }
+    else if(ac_number.value == "ac7") {
+     for (var i = 6; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+     document.getElementById("Account6f").style.display="block";
+     document.getElementById("Account7f").style.display="block";
+    }
+    else if(ac_number.value == "ac8") {
+     for (var i = 7; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+     document.getElementById("Account6f").style.display="block";
+     document.getElementById("Account7f").style.display="block";
+     document.getElementById("Account8f").style.display="block";
+    }
+    else if(ac_number.value == "ac9") {
+     for (var i = 8; i < minions.length; i++ ) {
+     minions[i].style.display = "none";
+     }
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+     document.getElementById("Account6f").style.display="block";
+     document.getElementById("Account7f").style.display="block";
+     document.getElementById("Account8f").style.display="block";
+     document.getElementById("Account9f").style.display="block";
+    }
+    else if(ac_number.value == "ac10") {
+     document.getElementById("Account2f").style.display="block";
+     document.getElementById("Account3f").style.display="block";
+     document.getElementById("Account4f").style.display="block";
+     document.getElementById("Account5f").style.display="block";
+     document.getElementById("Account6f").style.display="block";
+     document.getElementById("Account7f").style.display="block";
+     document.getElementById("Account8f").style.display="block";
+     document.getElementById("Account9f").style.display="block";
+     document.getElementById("Account10f").style.display="block";
+    }
+});
+// UI //
+// Script //
+var script = atob("Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEQyBUb2tlbiBMb2dpbgovLyBAdmVyc2lvbiAgICAgIDEuMgovLyBAZGVzY3JpcHRpb24gIEFsbG93cyBZb3UgVG8gTG9naW4gWW91ciBBY2NvdW50IFdpdGhvdXQgSW5wdXR0aW5nIFlvdXIgRS1tYWlsIEFuZCBQYXNzd29yZC4KLy8gQGF1dGhvciAgICAgICBXaUx1WCAmIFdvbmZ5Ci8vIEBtYXRjaCAgICAgICAgKjovL2Rpc2NvcmQuY29tL2xvZ2luCi8vIEBpbmNsdWRlICAgICAgKjovL2Rpc2NvcmQuY29tL2xvZ2luPyoKLy8gPT0vVXNlclNjcmlwdD09CmZ1bmN0aW9uIGxvZ2luKHRva2VuKSB7CiAgICBzZXRJbnRlcnZhbCgoKSA9PiB7CiAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChkb2N1bWVudC5jcmVhdGVFbGVtZW50IGBpZnJhbWVgKS5jb250ZW50V2luZG93LmxvY2FsU3RvcmFnZS50b2tlbiA9IGAiJHt0b2tlbn0iYAogICAgfSwgNTApOwogICAgc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgbG9jYXRpb24ucmVsb2FkKCk7CiAgICB9LCA1MCk7Cn0KCndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdsb2FkJywgKCkgPT4gewogICAgY29uc3QgdGFyZ2V0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiZGl2IilbN10KICAgIGNvbnN0IGFjY291bnRzID0gewogICAgICAgICdUb2tlbjEnOiAiMSIsCiAgICAgICAgJ1Rva2VuMic6ICIyIiwKICAgICAgICAnVG9rZW4zJzogIjMiLAogICAgICAgICdUb2tlbjQnOiAiNCIsCiAgICAgICAgJ1Rva2VuNSc6ICI1IiwKICAgICAgICAnVG9rZW42JzogIjYiLAogICAgICAgICdUb2tlbjcnOiAiNyIsCiAgICAgICAgJ1Rva2VuOCc6ICI4IiwKICAgICAgICAnVG9rZW45JzogIjkiLAogICAgICAgICdUb2tlbjEwJzogIjEwIgogICAgfTsKICAgIGNvbnN0IHNob3dCdXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICAgIHZhciBjb250YWluZXIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTsKICAgIHZhciBoaWRkZW4gPSBmYWxzZTsKICAgIGNvbnRhaW5lci5zdHlsZSA9ICJkaXNwbGF5IDogbm9uZTsiOwogICAgc2hvd0J1dHRvbi5pbm5lclRleHQgPSAiU2hvdyBBY2NvdW50cyI7CiAgICBzaG93QnV0dG9uLmNsYXNzTmFtZSA9ICJzaG93eWJ1dHRvbiIKICAgIHZhciBzdHlsZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInN0eWxlIik7CiAgICBsZXQgY3NzID0gIi5zaG93eWJ1dHRvbntwb3NpdGlvbjphYnNvbHV0ZTt0b3A6MTgwcHg7YmFja2dyb3VuZC1jb2xvcjogIzcyODlEQTsgd2lkdGg6MTY3LjgxMnB4OyBib3JkZXI6IG5vbmU7IGNvbG9yOiAjRkZGOyBwYWRkaW5nOiAxNnB4IDMycHg7IHRleHQtYWxpZ246IGNlbnRlcjsgZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDE2cHg7IGxpbmUtaGVpZ2h0OiAyNHB4OyBtYXJnaW4tYm90dG9tOiAwcHg7IG1hcmdpbi10b3A6IDIwcHg7IGJvcmRlci1yYWRpdXM6IDEwcHg7IHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgLjE3cyBlYXNlLGNvbG9yIC4xN3MgZWFzZTt9IjsKICAgIGNzcyArPSAiLnNob3d5YnV0dG9uOmhvdmVye2JhY2tncm91bmQtY29sb3I6ICM2NzdiYzQ7fSI7CiAgICBjc3MgKz0gIi5zaG93eWJ1dHRvbjphY3RpdmV7YmFja2dyb3VuZC1jb2xvcjogIzViNmVhZTt9IjsKICAgIGNzcyArPSAiLmFjY291bnRze2JhY2tncm91bmQtY29sb3I6ICM3Mjg5REE7IGhlaWdodDogNTBweDsgd2lkdGg6IDUwcHg7IGJvcmRlcjogbm9uZTsgY29sb3I6ICNGRkY7IHBhZGRpbmc6IDBweDsgdGV4dC1hbGlnbjogY2VudGVyOyBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTZweDsgbGluZS1oZWlnaHQ6IDI0cHg7IHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgLjE3cyBlYXNlLGNvbG9yIC4xN3MgZWFzZTt9IjsKICAgIGNzcyArPSAiLmFjY291bnRzOmhvdmVye2JhY2tncm91bmQtY29sb3I6ICM2NzdiYzQ7fSI7CiAgICBjc3MgKz0gIi5hY2NvdW50czphY3RpdmV7YmFja2dyb3VuZC1jb2xvcjogIzViNmVhZTt9IjsKCiAgICBpZiAoc3R5bGUuc3R5bGVTaGVldCkgewogICAgICAgIHN0eWxlLnN0eWxlU2hlZXQuY3NzVGV4dCA9IGNzczsKICAgIH0gZWxzZSB7CiAgICAgICAgc3R5bGUuYXBwZW5kQ2hpbGQoZG9jdW1lbnQuY3JlYXRlVGV4dE5vZGUoY3NzKSk7CiAgICB9CiAgICBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgiaGVhZCIpWzBdLmFwcGVuZChzdHlsZSk7CgogICAgc2hvd0J1dHRvbi5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsICgpID0+IHsKICAgICAgICBzaG93QnV0dG9uLmlubmVyVGV4dCA9IGhpZGRlbiA/ICJTaG93IEFjY291bnRzIiA6ICJIaWRlIEFjY291bnRzIjsKICAgICAgICBjb250YWluZXIuc3R5bGUgPSBoaWRkZW4gPyAiZGlzcGxheSA6IG5vbmU7IHdpZHRoIDogbWluLWNvbnRlbnQiIDogImRpc3BsYXkgOiBibG9jazsgd2lkdGggOiBtaW4tY29udGVudDsiOwogICAgICAgIGhpZGRlbiA9ICFoaWRkZW47CiAgICB9KQoKICAgIHRhcmdldC5hcHBlbmQoc2hvd0J1dHRvbik7CgogICAgZm9yIChjb25zdCBbdG9rZW4sIG5hbWVdIG9mIE9iamVjdC5lbnRyaWVzKGFjY291bnRzKSkgewogICAgICAgIHZhciBidXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICAgICAgICBidXR0b24uY2xhc3NOYW1lID0gImFjY291bnRzIjsKICAgICAgICBidXR0b24uaW5uZXJUZXh0ID0gbmFtZTsKICAgICAgICBidXR0b24uYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCAoKSA9PiB7CiAgICAgICAgICAgIGxvZ2luKHRva2VuKQogICAgICAgIH0pOwogICAgICAgIGNvbnRhaW5lci5hcHBlbmQoYnV0dG9uKTsKICAgIH0KICAgIHRhcmdldC5hcHBlbmQoY29udGFpbmVyKTsKCn0sIGZhbHNlKTs");
+function applychanges() {
+if (document.getElementById("ac_number").value == "ac1") {
+script = script.replace("'Token2': \"2\",","")
+script = script.replace("'Token3': \"3\",","")
+script = script.replace("'Token4': \"4\",","")
+script = script.replace("'Token5': \"5\",","")
+script = script.replace("'Token6': \"6\",","")
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+}
+else if (document.getElementById("ac_number").value == "ac2") {
+script = script.replace("'Token3': \"3\",","")
+script = script.replace("'Token4': \"4\",","")
+script = script.replace("'Token5': \"5\",","")
+script = script.replace("'Token6': \"6\",","")
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+}
+else if (document.getElementById("ac_number").value == "ac3") {
+script = script.replace("'Token4': \"4\",","")
+script = script.replace("'Token5': \"5\",","")
+script = script.replace("'Token6': \"6\",","")
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+}
+else if (document.getElementById("ac_number").value == "ac4") {
+script = script.replace("'Token5': \"5\",","")
+script = script.replace("'Token6': \"6\",","")
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+}
+else if (document.getElementById("ac_number").value == "ac5") {
+script = script.replace("'Token6': \"6\",","")
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+}
+else if (document.getElementById("ac_number").value == "ac6") {
+script = script.replace("'Token7': \"7\",","")
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+script = script.replace("Token6",document.getElementById("Account6").value);
+}
+else if (document.getElementById("ac_number").value == "ac7") {
+script = script.replace("'Token8': \"8\",","")
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+script = script.replace("Token6",document.getElementById("Account6").value);
+script = script.replace("Token7",document.getElementById("Account7").value);
+}
+else if (document.getElementById("ac_number").value == "ac8") {
+script = script.replace("'Token9': \"9\",","")
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+script = script.replace("Token6",document.getElementById("Account6").value);
+script = script.replace("Token7",document.getElementById("Account7").value);
+script = script.replace("Token8",document.getElementById("Account8").value);
+}
+else if (document.getElementById("ac_number").value == "ac9") {
+script = script.replace("'Token10': \"10\"","")
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+script = script.replace("Token6",document.getElementById("Account6").value);
+script = script.replace("Token7",document.getElementById("Account7").value);
+script = script.replace("Token8",document.getElementById("Account8").value);
+script = script.replace("Token9",document.getElementById("Account9").value);
+}
+else {
+script = script.replace("Token1",document.getElementById("Account1").value);
+script = script.replace("Token2",document.getElementById("Account2").value);
+script = script.replace("Token3",document.getElementById("Account3").value);
+script = script.replace("Token4",document.getElementById("Account4").value);
+script = script.replace("Token5",document.getElementById("Account5").value);
+script = script.replace("Token6",document.getElementById("Account6").value);
+script = script.replace("Token7",document.getElementById("Account7").value);
+script = script.replace("Token8",document.getElementById("Account8").value);
+script = script.replace("Token9",document.getElementById("Account9").value);
+script = script.replace("Token10",document.getElementById("Account10").value);
+}
+}
+function download() {
+const downloadToFile = (content, filename, contentType) => {
+  const a = document.createElement('a');
+  const file = new Blob([content], {type: contentType});
+  a.href= URL.createObjectURL(file);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+downloadToFile(script, 'script.user.js', 'text/plain');
+location.reload();
+};
+// Script //
+</script>
+</html>
