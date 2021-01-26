@@ -37,4 +37,9 @@
 - **Idea Of This Project Found By Exinie**
 <br></br>
 ## 👁️‍🗨️ Current Look 👁️‍🗨️
+**Version 1.2**
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/NewLookCombined.png" alt="Example">
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Script.png" alt="Example">
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Bookmark.png" alt="Example">
+**Version 1.1**
 <img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Currentlook.png" alt="Example">
