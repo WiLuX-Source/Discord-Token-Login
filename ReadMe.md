@@ -4,7 +4,7 @@
 <br></br>
 ## ⚠️ Read Before Use ⚠️
 - **No Ban Case Happened So Far But Use At Your Own Risk I'm Not Responsible If Anything Happens To Your Account.**
-- **Configurator Website Only Connects Internet For Getting The Logo Otherwise No Connection What So Ever.**
+- **Configurator Website Don't Connect To Internet For Offline Use.**
 - **If You Feel Uncomfortable With Configurator Website You Can Manually Edit The Script Or Disconnect From The Internet.**
 - **It Is Completely Open Source & No Malicious Code Used In This Project You Can Check It From The Repository.**
 - **If You're going to edit this script Or You're planning to use this somewhere make sure you credit Wonfy & WiLuX For Their Hardwork.**
