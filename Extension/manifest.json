@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Discord Token Login",
+    "version": "1.3",
+    "author" : "Wonfy & Wilux",
+    "homepage_url": "https://github.com/WiLuX-Source/Discord-Token-Login",
+    "description": "Made By Wonfy & Wilux - this open-source project is not affiliated with Discord.",
+    "permissions": ["tabs"],
+    "icons": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    },
+    "browser_action": {
+      "default_icon": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+      },
+      "default_popup" : "pages/popup/popup.html"
+    },
+    "content_scripts" : [
+      {
+        "matches" : ["*://discord.com/*"],
+        "js" : ["contentscript.js"]
+      }
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "tokenlogin@id.com",
+        "strict_min_version": "42.0"
+      }
+    }
+}
