@@ -8,6 +8,7 @@
 - **If You Feel Uncomfortable With Configurator Website You Can Manually Edit The Script Or Disconnect From The Internet.**
 - **If You're going to edit this script Or You're planning to use this somewhere make sure you credit Wonfy & WiLuX For Their Hardwork.**
 - **If you forked this script before I added this section, please update it or add our names to the credit list.**
+- **This project is not affiliated with Discord.**
 <br></br>
 ## 🌀 Features 🌀
 - **Script Method ✔️**
