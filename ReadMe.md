@@ -54,3 +54,13 @@
 - **Extension Method Made By WiLuX.**
 - **Idea Of This Project Found By Exinie.**
 <br></br>
+
+## 👁️‍🗨️ Current Look 👁️‍🗨️
+### Script Method
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Scriptmethod.png" alt="Script Method">
+
+### Bookmark Method
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Bookmarkmethod.png" alt="Bookmark Method">
+
+### Extension Method
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Extensionmethod.png" alt="Extension Method">
