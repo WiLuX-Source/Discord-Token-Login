@@ -63,4 +63,4 @@
 <img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Bookmarkmethod.png" alt="Bookmark Method">
 
 ### Extension Method
-<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Extensionmethod.png" alt="Extension Method">
+<img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/Extensionnew.png" alt="Extension Method">
