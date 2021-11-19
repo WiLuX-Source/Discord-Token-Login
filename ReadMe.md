@@ -31,9 +31,9 @@
 <br></br>
 
 ## ☄️ Extension Method ☄️
-1. **[Install The Extension.](https://github.com/WiLuX-Source/Discord-Token-Login/releases/tag/1.3)**
-2. **There are multiple ways to use an extension in Chromium & Gecko.**
-   1. **You can use the extension unpacked in Chromium & Gecko.**
+1. **[Install The Extension.](https://github.com/WiLuX-Source/Discord-Token-Login/releases/tag/1.5)**
+2. **There are multiple ways to use an extension in Chromium & Firefox.**
+   1. **You can use the extension unpacked in Chromium & Firefox.**
        - **Firefox deletes the extension when you load it unpacked!**
    2. **You can install the extension packed**
        - **There are flags you need to disable in order to install the extension method because of this extension not in the extension store** 
