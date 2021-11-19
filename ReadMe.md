@@ -8,6 +8,7 @@
 - **This is a completely open-source project you can look at the code if you have questions about "Privacy" & "How It works?"**
 - **If you're going to edit one of our methods or you're planning to use this somewhere make sure you credit WiLuX & Wonfy for their hardwork.**
 - **If you forked this repo before I added this section, please update it or add our names to the credit list.**
+- **Bot tokens & 2FA enabled account tokens are not supported in this project.**
 - **This project is not affiliated with Discord.**
 <br></br>
 
