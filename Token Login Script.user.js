@@ -4,6 +4,7 @@
 // @include     https://discord.com/channels/*
 // @include     https://discord.com/login?*
 // @homepageURL https://github.com/WiLuX-Source/Discord-Token-Login
+// @updateURL   https://github.com/WiLuX-Source/Discord-Token-Login/raw/master/Token%20Login%20Script.user.js
 // @description Allows You To Login Your Account Without Inputting Your E-mail And Password.
 // @grant       GM_getValue
 // @grant       GM_setValue
