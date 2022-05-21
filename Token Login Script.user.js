@@ -9,7 +9,7 @@
 // @grant       GM_getValue
 // @grant       GM_setValue
 // @run-at      document-end
-// @version     1.4.2
+// @version     1.4.3
 // @author      WiLuX & Wonfy
 // ==/UserScript==
 /*
@@ -133,7 +133,7 @@ const delbtn = document.createElement("button")
 const controls = document.createElement("div")
 const versiontext = document.createElement("span")
 const dragbutton = document.createElement("div")
-let accounts = GM_getValue("accountlist")
+let accounts = GM_getValue("accountlist") || []
 accountbody.className = "accountbody"
 helpfultext.className = "helptext"
 helpfultext.innerText = "You can scroll the list"
