@@ -152,7 +152,7 @@ dragbutton.innerHTML = `
 </svg>
 `;
 versiontext.className = "versionnumber"
-versiontext.innerText = "v1.4.2"
+versiontext.innerText = "v1.4.3"
 addbtn.className = "accountbutton";
 addbtn.innerText = "Add Account"
 addbtn.addEventListener("click",() => {
