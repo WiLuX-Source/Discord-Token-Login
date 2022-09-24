@@ -2,12 +2,12 @@
 <img src="https://raw.githubusercontent.com/WiLuX-Source/Discord-Token-Login/master/Resources/New_LogoNB.png" height="200em" alt="Logo">
 <br></br>
 
-[![Github last commit date](https://img.shields.io/github/last-commit/WiLuX-Source/Discord-Token-Login.svg?label=Updated&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/commits)
-[![Total downloads](https://img.shields.io/github/downloads/WiLuX-Source/Discord-Token-Login/total.svg?label=Downloads&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
-[![Discord](https://img.shields.io/discord/852591290872233984.svg?color=7289da&label=Discord&logo=discord&logoColor=white&cacheSeconds=3600)](https://discord.gg/BvT98xY2rr)
-[![GitHub release version](https://img.shields.io/github/v/release/WiLuX-Source/Discord-Token-Login.svg?label=Version&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
-[![GitHub release date](https://img.shields.io/github/release-date-pre/WiLuX-Source/Discord-Token-Login.svg?label=Released&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
-[![Github release downloads](https://img.shields.io/github/downloads-pre/WiLuX-Source/Discord-Token-Login/latest/total.svg?label=Last+Downloads&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
+[![Github last commit date](https://img.shields.io/github/last-commit/WiLuX-Source/Discord-Token-Login.svg?style=for-the-badge&label=Updated&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/commits)
+[![Total downloads](https://img.shields.io/github/downloads/WiLuX-Source/Discord-Token-Login/total.svg?style=for-the-badge&label=Downloads&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
+[![Discord](https://img.shields.io/discord/852591290872233984.svg?style=for-the-badge&color=7289da&label=Discord&logo=discord&logoColor=white&cacheSeconds=3600)](https://discord.gg/BvT98xY2rr)
+[![GitHub release version](https://img.shields.io/github/v/release/WiLuX-Source/Discord-Token-Login.svg?style=for-the-badge&label=Version&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
+[![GitHub release date](https://img.shields.io/github/release-date-pre/WiLuX-Source/Discord-Token-Login.svg?style=for-the-badge&label=Released&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
+[![Github release downloads](https://img.shields.io/github/downloads-pre/WiLuX-Source/Discord-Token-Login/latest/total.svg?style=for-the-badge&label=Last+Downloads&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
 </div>
 
 ## ⚠️ Read Before Use ⚠️
@@ -17,6 +17,8 @@
 - **If you forked this repo before I added this section, please update it or add our names to the credit list.**
 - **Bot tokens & 2FA enabled account tokens are not supported in this project.**
 - **This project is not affiliated with Discord.**
+- **Discord makes unusable your tokens after you logout from your account. Just logout with clearing storage & cookies or use incognito.**
+- **Check out more info in our FAQ(Work In Progress.)**
 <br></br>
 
 ## 🌀 Features 🌀
