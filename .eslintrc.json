@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "webextensions": true,
+        "greasemonkey": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": ["error", "always"],
+        "object-curly-spacing": ["error", "always"],
+        "quotes": ["error", "single", {
+            "avoidEscape": false
+        }]
+    }
+}

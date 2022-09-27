@@ -2,35 +2,35 @@
 	font-family: 'Whitney';
 	font-style: normal;
 	font-weight: 400;
-	src: url(../fonts/whitneymedium.woff) format('woff');
+	src: url(../../fonts/whitneymedium.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Whitney';
 	font-style: normal;
 	font-weight: 200;
-	src: url(../fonts/whitneybook.woff) format('woff');
+	src: url(../../fonts/whitneybook.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Whitney';
 	font-style: normal;
 	font-weight: 100;
-	src: url(../fonts/whitneylight.woff) format('woff');
+	src: url(../../fonts/whitneylight.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Whitney';
 	font-style: normal;
 	font-weight: 700;
-	src: url(../fonts/whitneybold.woff) format('woff');
+	src: url(../../fonts/whitneybold.woff) format('woff');
 }
 
 @font-face {
 	font-family: 'Whitney';
 	font-style: normal;
 	font-weight: 500;
-	src: url(../fonts/whitneysemibold.woff) format('woff');
+	src: url(../../fonts/whitneysemibold.woff) format('woff');
 }
 
 @keyframes notifin {
