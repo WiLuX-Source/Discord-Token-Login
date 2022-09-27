@@ -25,7 +25,6 @@
 - **Script Method ✔️**
 - **Bookmark Method ✔️**
 - **Extension Method ✔️**
-- **Client Login Method ❌**
 <br></br>
 
 ## 📚 Used Sources 📚
