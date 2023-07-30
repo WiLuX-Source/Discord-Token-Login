@@ -119,6 +119,12 @@ function manifest() {
 		)
 		.pipe(gulp.dest(paths.build));
 }
+/* Main build function */
+const build = gulp.series(
+	cleanBuild,
+	gulp.parallel(copyAssets, manifest, copyHTML, css, js),
+);
+
 /* Dev Functions */
 
 function devcss(fileName) {
@@ -185,4 +191,4 @@ function watch() {
 	gulp.watch(paths.manifest, { ignoreInitial: false }, gulp.series(manifest));
 }
 
-export { cleanBuild, watch, css };
+export { cleanBuild, watch, build };

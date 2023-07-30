@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "gulp watch",
-    "build:chromium": "tobemade",
-    "build:firefox": "tobemade",
+    "build:chromium": "gulp build",
+    "build:firefox": "TARGET=firefox gulp build",
     "clean": "gulp cleanBuild"
   },
   "dependencies": {
