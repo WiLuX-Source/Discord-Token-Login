@@ -17,16 +17,15 @@
 	],
 	"icons": {
 		"16": "icons/16.png",
+		"24": "icons/24.png",
 		"32": "icons/32.png",
 		"48": "icons/48.png",
 		"128": "icons/128.png"
 	},
 	"browser_action": {
 		"default_icon": {
-			"16": "icons/16.png",
 			"32": "icons/32.png",
-			"48": "icons/48.png",
-			"128": "icons/128.png"
+			"24": "icons/24.png"
 		},
 		"default_popup": "popup/popup.html"
 	},

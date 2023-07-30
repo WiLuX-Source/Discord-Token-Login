@@ -1,6 +1,8 @@
 <div align="center">
 
-![Logo](https://i.postimg.cc/P5JZnPjW/Logo.png)
+![Logo](https://github.com/WiLuX-Source/Discord-Token-Login/assets/61833703/55061897-5ebb-4489-9cfd-5e6e22315ab6)
+
+# TOKEN LOGIN
 
 [![Github last commit date](https://img.shields.io/github/last-commit/WiLuX-Source/Discord-Token-Login.svg?style=for-the-badge&label=Updated&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/commits)
 [![Total downloads](https://img.shields.io/github/downloads/WiLuX-Source/Discord-Token-Login/total.svg?style=for-the-badge&label=Downloads&logo=github&cacheSeconds=600)](https://github.com/WiLuX-Source/Discord-Token-Login/releases)
