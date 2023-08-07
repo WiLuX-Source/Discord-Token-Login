@@ -8,6 +8,7 @@ function login(token) {
 		location.reload();
 	}, 50);
 }
+
 chrome.runtime.onMessage.addListener(function (message) {
 	if (message.message === "login") {
 		login(message.token);
@@ -22,6 +23,7 @@ chrome.runtime.onMessage.addListener(function (message) {
 			try {
 				selected_group.accounts.push({
 					name: "Account",
+					image: "",
 					token: localStorage.getItem("token").replaceAll('"', ""),
 					lastlogin: null,
 				});
@@ -32,4 +34,3 @@ chrome.runtime.onMessage.addListener(function (message) {
 		});
 	}
 });
-console.log("hello");
