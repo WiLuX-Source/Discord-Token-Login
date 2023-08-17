@@ -1,0 +1,31 @@
+{
+  "name": "dc-token-login-script",
+  "version": "1.5.0",
+  "description": "A userscript allows you to change your discord account with one click.",
+  "private": true,
+  "author": "Wilux",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "Custom",
+  "scripts": {
+    "dev": "rollup -wc",
+    "clean": "rm -rf dist",
+    "build": "NODE_ENV=production rollup -c"
+  },
+  "devDependencies": {
+    "@types/greasemonkey": "^4.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.1",
+    "@babel/runtime": "^7.22.6",
+    "@violentmonkey/dom": "^2.1.4",
+    "@violentmonkey/ui": "^0.7.8",
+    "rollup-plugin-userscript": "^0.1.1",
+    "unocss": "^0.54.1",
+    "@babel/plugin-transform-react-jsx": "^7.22.5",
+    "@gera2ld/plaid": "~2.5.9",
+    "@gera2ld/plaid-rollup": "~2.5.9",
+    "@unocss/postcss": "^0.54.1"
+  }
+}

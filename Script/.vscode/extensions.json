@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "antfu.unocss",
+        "ms-vscode-remote.remote-wsl",
+        "dbaeumer.vscode-eslint"
+    ]
+}

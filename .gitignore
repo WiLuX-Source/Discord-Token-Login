@@ -3,3 +3,5 @@ Extension/build
 Extension/dist
 Extension/package-lock.json
 Extension/pnpm-lock.yaml
+Script/node_modules
+Script/pnpm-lock.yaml
