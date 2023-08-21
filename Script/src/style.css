@@ -1,0 +1,83 @@
+@unocss default;
+
+.accountbody {
+	@apply w-472px p-32px text-18px b-rd-5px h-400px text-#72767d absolute z-9999;
+	background: var(--background-mobile-secondary);
+	box-sizing: border-box;
+}
+.title {
+	color: var(--header-primary);
+}
+.helptext {
+	color: var(--header-secondary);
+}
+
+.accountlist {
+	grid-template-rows: 44px 44px 44px 44px;
+	border: 1px solid rgb(255 255 255 / 10%);
+	scrollbar-width: none;
+}
+.accountlist::-webkit-scrollbar {
+	display: none;
+}
+
+#dragbutton > svg {
+	fill: var(--header-secondary);
+}
+
+.versionnumber {
+	color: var(--header-secondary);
+}
+
+.accountbutton {
+	color: #fff;
+	background-color: var(--brand-experiment);
+	width: 170px;
+	position: relative;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 3px;
+	font-weight: 500;
+	padding: 2px 16px;
+	font-size: 16px;
+	line-height: 24px;
+	height: 44px;
+	min-width: 130px;
+	min-height: 44px;
+	transition:
+		background-color 0.17s ease,
+		color 0.17s ease;
+}
+
+.accountbutton:hover {
+	background-color: var(--brand-experiment-560);
+}
+
+.accountbutton:active {
+	background-color: var(--brand-experiment-600);
+}
+
+.userbutton {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	width: 170px;
+	line-height: 24px;
+	height: 44px;
+	font-weight: 500;
+	padding: 2px 16px;
+	border-radius: 3px;
+	background-color: var(--background-tertiary);
+	align-items: center;
+	transition: background-color 0.17s ease;
+}
+
+.userbutton:hover {
+	background-color: var(--background-accent);
+}

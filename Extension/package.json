@@ -1,0 +1,31 @@
+{
+  "name": "dc-token-login-ext",
+  "version": "1.7.0",
+  "description": "A browser extension that allows you to login your discord accounts with one click.",
+  "author": "WiLuX",
+  "license": "Custom",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "gulp watch",
+    "build:chromium": "gulp build",
+    "build:firefox": "TARGET=firefox gulp build",
+    "clean": "gulp cleanBuild"
+  },
+  "dependencies": {
+    "cssnano": "^6.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "gulp": "4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-filter": "^8.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-json-editor": "^2.5.7",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.27",
+    "postcss-load-config": "^4.0.1",
+    "postcss-nested": "^6.0.1"
+  }
+}

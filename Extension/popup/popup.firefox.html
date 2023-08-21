@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="popup.css" />
+	<title>TOKEN LOGIN</title>
+</head>
+<body class="preload">
+	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0">
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" id="github">
+			<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 -960 960 960" id="plus">
+			<path d="M450-450H200v-60h250v-250h60v250h250v60H510v250h-60v-250Z"/>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" id="accountlogo">
+			<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+			<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" id="discord">
+			<g clip-path="url(#clip0_55_30)">
+				<circle cx="15" cy="15" r="15" />
+				<path d="M21.2382 9.16134C20.071 8.61478 18.8394 8.22469 17.5741 8.0008C17.5626 7.99883 17.5508 8.00053 17.5404 8.00567C17.5299 8.01081 17.5212 8.01913 17.5156 8.0295C17.3569 8.31647 17.1814 8.69184 17.0588 8.98571C15.6949 8.7745 14.3075 8.7745 12.9436 8.98571C12.8068 8.65835 12.6521 8.3391 12.4801 8.0295C12.4744 8.01924 12.4657 8.01102 12.4552 8.00589C12.4448 8.00077 12.4331 7.99899 12.4216 8.0008C11.156 8.22349 9.92415 8.61378 8.75754 9.16134C8.74755 9.16523 8.7392 9.17253 8.73391 9.182C6.40069 12.7394 5.76057 16.2095 6.07444 19.6361C6.07556 19.6521 6.08569 19.6682 6.09806 19.6785C7.45674 20.7055 8.97645 21.4896 10.5924 21.9973C10.6038 22.001 10.6161 22.0009 10.6274 21.997C10.6387 21.993 10.6485 21.9855 10.6554 21.9755C11.0019 21.4934 11.3101 20.9849 11.5756 20.4499C11.5812 20.4389 11.5831 20.4264 11.581 20.4142C11.579 20.402 11.5732 20.3908 11.5644 20.3822C11.5586 20.3766 11.5517 20.3723 11.5441 20.3696C11.0594 20.1795 10.59 19.9512 10.1401 19.6866C10.1276 19.6793 10.1182 19.6674 10.114 19.6533C10.1099 19.6392 10.1111 19.624 10.1176 19.6108C10.1215 19.6023 10.1273 19.5948 10.1345 19.589C10.229 19.5167 10.3235 19.4409 10.4135 19.3652C10.4215 19.3586 10.431 19.3545 10.4411 19.353C10.4512 19.3516 10.4615 19.353 10.4709 19.3571C13.4172 20.73 16.6066 20.73 19.5169 19.3571C19.5266 19.3528 19.5373 19.3513 19.5478 19.3527C19.5583 19.3541 19.5683 19.3584 19.5765 19.3652C19.6665 19.4409 19.761 19.5167 19.8555 19.589C19.8632 19.5947 19.8694 19.6023 19.8734 19.611C19.8775 19.6197 19.8795 19.6294 19.879 19.639C19.8786 19.6487 19.8758 19.6581 19.8709 19.6664C19.866 19.6747 19.8592 19.6816 19.851 19.6866C19.4022 19.9536 18.9322 20.1817 18.4459 20.3684C18.4382 20.3713 18.4311 20.3759 18.4253 20.3818C18.4195 20.3878 18.415 20.395 18.4122 20.4029C18.4096 20.4106 18.4085 20.4187 18.4091 20.4268C18.4097 20.4349 18.4119 20.4428 18.4156 20.4499C18.6856 20.9837 18.9949 21.4934 19.3347 21.9755C19.3415 21.9855 19.3513 21.993 19.3627 21.997C19.374 22.0009 19.3863 22.001 19.3977 21.9973C21.0163 21.4911 22.5385 20.707 23.8988 19.6785C23.9056 19.6737 23.9112 19.6674 23.9153 19.6601C23.9194 19.6527 23.9218 19.6445 23.9224 19.6361C24.2981 15.6746 23.2935 12.2332 21.2607 9.18315C21.2586 9.17811 21.2555 9.17357 21.2517 9.16981C21.2478 9.16606 21.2432 9.16317 21.2382 9.16134ZM12.0155 17.5492C11.1279 17.5492 10.3978 16.7181 10.3978 15.6987C10.3978 14.6782 11.1144 13.8471 12.0155 13.8471C12.9234 13.8471 13.6467 14.6851 13.6332 15.6987C13.6332 16.7181 12.9166 17.5492 12.0155 17.5492ZM17.9959 17.5492C17.1094 17.5492 16.3782 16.7181 16.3782 15.6987C16.3782 14.6782 17.0948 13.8471 17.9959 13.8471C18.9038 13.8471 19.6283 14.6851 19.6137 15.6987C19.6137 16.7181 18.9038 17.5492 17.9959 17.5492Z" fill="#232428"/>
+				</g>
+				<defs>
+				<clipPath id="clip0_55_30">
+				<rect width="30" height="30" />
+				</clipPath>
+				</defs>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 22" id="info">
+			<path xmlns="http://www.w3.org/2000/svg" d="M11 0C4.928 0 0 4.928 0 11C0 17.072 4.928 22 11 22C17.072 22 22 17.072 22 11C22 4.928 17.072 0 11 0ZM12.1 16.5H9.9V9.9H12.1V16.5ZM12.1 7.7H9.9V5.5H12.1V7.7Z"/>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="eye">
+			<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+			<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" id="crossmodal">
+			<path d="M18.4 4L12 10.4L5.6 4L4 5.6L10.4 12L4 18.4L5.6 20L12 13.6L18.4 20L20 18.4L13.6 12L20 5.6L18.4 4Z" />
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 24" id="export">
+			<path xmlns="http://www.w3.org/2000/svg" d="M20 8.47059H14.2857V0H5.71429V8.47059H0L10 18.3529L20 8.47059ZM0 21.1765V24H20V21.1765H0Z" />
+		</symbol>
+		<symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21 25" id="import">
+			<path xmlns="http://www.w3.org/2000/svg" d="M6 19.1176H15V10.2941H21L10.5 0L0 10.2941H6V19.1176ZM0 22.0588H21V25H0V22.0588Z" />
+		</symbol>
+	</svg>
+	<div id="top-line">
+		<svg class="quickaccess" href="https://github.com/WiLuX-Source/Discord-Token-Login">
+			<use xlink:href="#github"></use>
+		</svg>
+		<h4>TOKEN LOGIN</h4>
+		<svg class="quickaccess" href="https://discord.com/login">
+			<use xlink:href="#discord"></use>
+		</svg>
+	</div>
+	<div id="sidebar">
+		<div id="group_body">
+		</div>
+		<div data-modal-target="#groupmodal" class="sidebar_icon">
+			<svg>
+				<use xlink:href="#plus"></use>
+			</svg>
+			<span class="tooltip left">Create Group</span>
+		</div>
+		<div data-modal-target="#aboutmodal" class="sidebar_icon">
+			<svg style=" width: 24px; height: 24px;">
+				<use xlink:href="#info"></use>
+			</svg>
+			<span class="tooltip left">About</span>
+		</div>
+	</div>
+	<div id="floatbar">
+		<div data-modal-target="#accountmodal" class="float_icon">
+			<svg style="width: 30px; height: 30px;">
+				<use xlink:href="#plus"></use>
+			</svg>
+			<span class="tooltip right">Add Account</span>
+		</div>
+	</div>
+	<div id="accountlist"></div>
+	<div class="modal" id="groupmodal">
+		<div class="modal-header">
+			<h4>CREATE GROUP</h4>
+			<svg class="modal-header-button" data-close-button>
+				<use xlink:href="#crossmodal"></use>
+			</svg>
+		</div>
+		<div class="modal-body">
+			<input class="groupinput" placeholder="Group Name" />
+		</div>
+		<div class="modal-footer">
+			<button class="button-normal" data-confirm-button>Create Group</button>
+		</div>
+	</div>
+	<div class="modal" id="accountmodal">
+		<div class="modal-header">
+			<h4>ADD ACCOUNT</h4>
+			<svg class="modal-header-button" data-close-button>
+				<use xlink:href="#crossmodal"></use>
+			</svg>
+		</div>
+		<div class="modal-body">
+			<input class="accountinput" placeholder="Account Name" maxlength="18" />
+			<input class="accountinput" placeholder="Account Image (Optional)" />
+			<input type="password" class="hideable accountinput" placeholder="Account Token" />
+		</div>
+		<div class="modal-footer">
+			<button class="button-normal" data-confirm-button>Add Account</button>
+			<svg class="button-hide">
+				<use xlink:href="#eye"></use>
+			</svg>
+		</div>
+	</div>
+	<div class="modal" id="updatemodal">
+		<div class="modal-header">
+			<h4>UPDATE ACCOUNT</h4>
+			<svg class="modal-header-button" data-close-button>
+				<use xlink:href="#crossmodal"></use>
+			</svg>
+		</div>
+		<div class="modal-body">
+			<input class="accountinput" placeholder="Account Name" maxlength="18" />
+			<input class="accountinput" placeholder="Account Image (Optional)" />
+			<input type="password" class="hideable accountinput" placeholder="Account Token" />
+		</div>
+		<div class="modal-footer">
+			<button class="button-normal" data-confirm-button>Update Account</button>
+			<svg class="button-hide">
+				<use xlink:href="#eye"></use>
+			</svg>
+		</div>
+	</div>
+	<div class="modal" id="aboutmodal">
+		<div class="modal-header">
+			<h4>About</h4>
+			<svg class="modal-header-button" data-close-button>
+				<use xlink:href="#crossmodal"></use>
+			</svg>
+		</div>
+		<div class="modal-body">
+			<span>Version 1.7</span>
+			<span>Tutorial can be found <span href="https://github.com/WiLuX-Source/Discord-Token-Login/wiki" style="cursor:pointer;color:#0af;">here</span></span>
+			<span>Made by Wilux</span>
+		</div>
+		<div class="modal-footer">
+			<button class="button-normal" href="https://github.com/WiLuX-Source/Discord-Token-Login">Give a star!</button>
+		</div>
+	</div>
+	<div id="notification"></div>
+	<div id="overlay"></div>
+	<div class="rightclickmenu" id="accrightclick">
+		<button data-action="update">Update Account</button>
+		<button data-action="delete">Delete Account</button>
+	</div>
+	<div class="rightclickmenu" id="grouprightclick">
+		<button data-action="import">Import Accounts</button>
+		<button data-action="export">Export Accounts</button>
+		<button data-action="delete">Delete Group</button>
+	</div>
+	<template account-template>
+		<div class="accountwrapper">
+			<div class="accountholder">
+				<img style="display: none;" class="holderlogo">
+				<svg class="holderlogo">
+					<use xlink:href="#accountlogo"></use>
+				</svg>
+				<div>
+					<span class="header">Username</span>
+					<span time-span></span>
+				</div>
+			</div>
+		</div>
+	</template>
+	<template group-template>
+		<div class="sidebar_icon server">
+			<span></span>
+			<span group-name class="tooltip server"></span>
+		</div>
+	</template>
+	<script src="popup.js"></script>
+</body>
+</html>
