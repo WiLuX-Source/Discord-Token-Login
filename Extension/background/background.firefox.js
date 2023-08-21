@@ -35,6 +35,13 @@ function create() {
 				contexts: ["all"],
 				documentUrlPatterns: ["*://discord.com/*"],
 			});
+			browser.contextMenus.create({
+				id: "logout",
+				title: "Logout",
+				type: "normal",
+				contexts: ["all"],
+				documentUrlPatterns: ["*://discord.com/*"],
+			});
 		}
 	});
 }
@@ -46,6 +53,11 @@ browser.contextMenus.onClicked.addListener(function (info, tab) {
 		create();
 	} else if (info.menuItemId === "token") {
 		browser.tabs.sendMessage(tab.id, { message: "gettoken" });
+		switcher = false;
+		webrequest.disable();
+		create();
+	} else if (info.menuItemId === "logout") {
+		browser.tabs.sendMessage(tab.id, { message: "logout" });
 		switcher = false;
 		webrequest.disable();
 		create();

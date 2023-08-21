@@ -29,6 +29,13 @@ function create() {
 				contexts: ["all"],
 				documentUrlPatterns: ["*://discord.com/*"],
 			});
+			chrome.contextMenus.create({
+				id: "logout",
+				title: "Logout",
+				type: "normal",
+				contexts: ["all"],
+				documentUrlPatterns: ["*://discord.com/*"],
+			});
 		}
 	});
 }
@@ -41,6 +48,11 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
 		create();
 	} else if (info.menuItemId === "token") {
 		chrome.tabs.sendMessage(tab.id, { message: "gettoken" });
+		switcher = false;
+		toggleJS("allow");
+		create();
+	} else if (info.menuItemId === "logout") {
+		chrome.tabs.sendMessage(tab.id, { message: "logout" });
 		switcher = false;
 		toggleJS("allow");
 		create();

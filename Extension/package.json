@@ -5,6 +5,7 @@
   "author": "WiLuX",
   "license": "Custom",
   "type": "module",
+  "private": true,
   "scripts": {
     "dev": "gulp watch",
     "build:chromium": "gulp build",

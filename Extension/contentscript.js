@@ -9,6 +9,11 @@ function login(token) {
 	}, 50);
 }
 
+function logout() {
+	localStorage.setItem("token", "");
+	location.reload();
+}
+
 chrome.runtime.onMessage.addListener(function (message) {
 	if (message.message === "login") {
 		login(message.token);
@@ -32,5 +37,7 @@ chrome.runtime.onMessage.addListener(function (message) {
 				location.reload();
 			}
 		});
+	} else if (message.message === "logout") {
+		logout();
 	}
 });
