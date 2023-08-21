@@ -1,0 +1,4 @@
+[submodule "Bookmarklet"]
+	path = Bookmarklet
+	url = https://github.com/WiLuX-Source/Discord-Token-Login
+	branch = bookmark
